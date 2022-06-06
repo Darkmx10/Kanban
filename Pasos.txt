@@ -1,0 +1,22 @@
+
+---Proyectos---
+1. Creación de modelo Proyecto
+2. Carpeta Data y clase ApplicationDbContext: Instancia requerida para la migración, sin esto la migración queda vacía
+3. Conexión a la BD
+    Cadena de conex en appssetings.json
+    ConfigureServices en Startup.cs
+    Crear carpeta Data y clase ApplicationDbContext
+4. Migración
+    En consola 
+    add-migration MigracionInicial
+    update-database
+5. Repository
+    iProyectoRepository: Interface con declaración de métodos
+    ProyectoRepository: Contiene las instrucciones de cada método
+6. Mapper: Vincula el modelo Dto con el modelo Proyecto
+7. Controlador: Get Proyectos, Get Proyecto, Post, Patch, Delete
+
+---Tareas---
+1. Creacion Modelo Tarea
+     Variales y Relación
+2. Instanciar en clase ApplicationDbContext: Instancia requerida para la migración, sin esto la migración queda vacía
