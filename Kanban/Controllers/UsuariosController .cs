@@ -39,7 +39,6 @@ namespace Kanban.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [HttpGet]
         [ProducesResponseType(200, Type = typeof(List<UsuarioDto>))] //Corrige el codigo de respuesta a 200
         [ProducesResponseType(400, Type = typeof(List<UsuarioDto>))] //400: Bad request
         public IActionResult GetUsuarios() //Obtiene todos los usuarios haciendo uso de Dto para no exponer el modelo
