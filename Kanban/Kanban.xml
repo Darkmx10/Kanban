@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kanban</name>
+    </assembly>
+    <members>
+        <member name="M:Kanban.Controllers.ProyectosController.GetProyecto">
+            <summary>
+            Obtener todos los proyectos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.ProyectosController.GetProyecto(System.Int32)">
+             <summary>
+            Obtener un proyecto individual
+             </summary>
+             <param name="proyectoId">Este es el ID del Proyecto</param>
+             <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.ProyectosController.CrearProyecto(Kanban.Modelos.Dtos.ProyectoDto)">
+            <summary>
+            Crear nuevo proyecto
+            </summary>
+            <param name="proyectoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.ProyectosController.ActualizarProyecto(System.Int32,Kanban.Modelos.Dtos.ProyectoDto)">
+            <summary>
+            Actualizar un proyeto existente
+            </summary>
+            <param name="proyectoId"></param>
+            <param name="proyectoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.ProyectosController.BorrarProyecto(System.Int32)">
+            <summary>
+            Borrar un proyecto existente
+            </summary>
+            <param name="proyectoId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.TareasController.GetTarea">
+            <summary>
+            Obtener todas las tareas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.TareasController.GetTarea(System.Int32)">
+            <summary>
+            Obtener una tarea por ID
+            </summary>
+            <param name="tareaId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.TareasController.GetTareaEnProyecto(System.Int32)">
+            <summary>
+            Buscar las tareas de un proyecto recibiendo Id de proyecto
+            </summary>
+            <param name="proyectoId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.TareasController.Buscar(System.String)">
+            <summary>
+            Buscar tarea por nombre
+            </summary>
+            <param name="nombre"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.TareasController.CrearTarea(Kanban.Modelos.Dtos.TareaCreateDto)">
+            <summary>
+            Crear nueva tarea
+            </summary>
+            <param name="TareaDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.TareasController.ActualizarTarea(System.Int32,Kanban.Modelos.Dtos.TareaDto)">
+            <summary>
+            Actualizar tarea
+            </summary>
+            <param name="tareaId"></param>
+            <param name="tareaDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.TareasController.BorrarTarea(System.Int32)">
+            <summary>
+            Borrar tarea
+            </summary>
+            <param name="tareaId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.UsuariosController.GetUsuarios">
+            <summary>
+            Obtener todos los usuarios
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.UsuariosController.GetUsuario(System.Int32)">
+            <summary>
+            Obtener un usuario individual por su ID
+            </summary>
+            <param name="usuarioId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.UsuariosController.Registro(Kanban.Modelos.Dtos.UsuarioAuthDto)">
+            <summary>
+            Registrar usuario
+            </summary>
+            <param name="usuarioAuthDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanban.Controllers.UsuariosController.Login(Kanban.Modelos.Dtos.UsuarioLoginDto)">
+            <summary>
+            Login
+            </summary>
+            <param name="usuarioLoginDto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

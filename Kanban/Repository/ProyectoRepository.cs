@@ -12,7 +12,7 @@ namespace Kanban.Repository
     {
         private readonly ApplicationDbContext _bd; //Instancia del contexto
 
-        public ProyectoRepository(ApplicationDbContext bd)
+        public ProyectoRepository(ApplicationDbContext bd) //Instancia acceso a la base de datos
         {
             _bd = bd; //Para usar en todos los metodos
         }

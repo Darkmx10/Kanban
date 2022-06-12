@@ -13,6 +13,10 @@ namespace Kanban.KanbanMapper
         public KanbanMappers()
         {
             CreateMap<Proyecto, ProyectoDto>().ReverseMap(); //Reverse map: Viseversa 
+            CreateMap<Tarea, TareaDto>().ReverseMap(); //Reverse map: Viseversa 
+            CreateMap<Tarea, TareaCreateDto>().ReverseMap(); //Reverse map: Viseversa 
+            CreateMap<Tarea, TareaUpdateDto>().ReverseMap(); //Reverse map: Viseversa 
+            CreateMap<Usuario, UsuarioDto>().ReverseMap();
         }
     }
 }

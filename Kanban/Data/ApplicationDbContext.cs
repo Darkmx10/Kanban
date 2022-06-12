@@ -15,6 +15,7 @@ namespace Kanban.Data
         }
         //Instancia requerida para la migración, sin esto la migración queda vacía
         public DbSet<Proyecto> Proyecto { get; set; }
-        public DbSet<Tarea> Tarea { get; set; } 
+        public DbSet<Tarea> Tarea { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
     }
 }

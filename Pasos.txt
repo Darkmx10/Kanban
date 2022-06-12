@@ -10,13 +10,72 @@
     En consola 
     add-migration MigracionInicial
     update-database
-5. Repository
-    iProyectoRepository: Interface con declaración de métodos
+5. Carpeta Dtos y clase ProyectpDto
+6. Repository
+   iProyectoRepository: Interface con declaración de métodos
     ProyectoRepository: Contiene las instrucciones de cada método
-6. Mapper: Vincula el modelo Dto con el modelo Proyecto
-7. Controlador: Get Proyectos, Get Proyecto, Post, Patch, Delete
+7.  Startup: habilitar uso global de los Repository
+8. Mapper: Vincula el modelo Dto con el modelo Proyecto
+9. Controlador: Get Proyectos, Get Proyecto, Post, Patch, Delete
 
 ---Tareas---
 1. Creacion Modelo Tarea
      Variales y Relación
 2. Instanciar en clase ApplicationDbContext: Instancia requerida para la migración, sin esto la migración queda vacía
+3. Migración
+    En consola 
+    add-migration MigracionTarea
+    update-database
+4. Crear Dtos: clases TareaDto, TareaCreateDto y TareaUdateDto
+5. Repository
+    iTareaRepository: Interface con declaración de métodos
+    TareaRepository: Contiene las instrucciones de cada método
+7.  Startup: habilitar uso global de los Repository
+8. Controlador: Get Proyectos, Get Proyecto, Post, Patch, Delete
+9. Mapper: Vincula el modelo Dto con el modelo Proyecto
+10. TareaController: Metodo GetTareaEnProyecto, Buscar
+
+---Usuarios---
+1. Creacion Modelo Usuario
+2. Instanciar en clase ApplicationDbContext: Instancia requerida para la migración, sin esto la migración queda vacía
+3. Migración
+    En consola 
+    add-migration MigracionUsuario
+    update-database
+4. Crear Dtos Usuario
+5. Repository
+    iUsuarioRepository: Interface con declaración de métodos
+    UsuarioRepository: Contiene las instrucciones de cada método
+6. Startup: Uso global de los Repository
+7. Controlador: Get Proyectos, Get Proyecto, Registro
+    LOGIN appsettings.json Token
+    Startup dependecia de Token
+8. Mapper: Vincula el modelo Dto con el modelo Proyecto
+
+
+---Documentando---
+1. Instalar paquete Swashbuckle
+2. Startup: Config de documentación / Linea para documentacion api
+3. Para acceder a la API: https://localhost:44359/swagger/ApiKanban/swagger.json
+   Acceder de manera mas visual https://localhost:44359/swagger/index.html
+4. lauchSettings.json 
+     Eliminar: "launchUrl": "weatherforecast",
+5. Descripcion para cada metodo
+     Arriba de cada metodo escribir: /// 
+     Propiedades del proyecto/Compilación/Archivo de documentación: Kanban.xml
+6. Suprimir advertencias: 
+     Propiedades del proyecto/Compilación/Suprimir advertencias: 1701;1702;1591
+7. Cambiar codigos de respuesta en cada controlador: ProducesResponseType
+8. Multiple documentación: Startup.cs
+    En cada controlador: [ApiExplorerSettings(GroupName = "ApiKanbanTareas")]
+9.  Soporte para CORS en Startup.cs Usar la api desde dominios diferentes
+10. Autenticación y autorización
+      En Startup.cs: app.UseAuthentication(); / app.UseAuthorization();
+      En el controlador: [Authorize] para proteger todos los metodos
+      [AllowAnonymous] para hacer público un método en específica (Encima del [HttpGet])
+11. Autenticación en documentación: Startups.cs 
+12. Manejo de errores y excepciones
+      En launchSettings.json / profiles / cambiar Development por Production para no exponer errores el cliente
+      Manejo de excepciones globales: Startup.cs / UseExceptionHandler
+      Crear carpeta Helpers / Clase Extensiones.cs
+

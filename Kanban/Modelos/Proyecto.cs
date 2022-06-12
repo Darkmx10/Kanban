@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Kanban.Modelos
 {
+#pragma warning disable CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
     public class Proyecto
     {
         [Key]
         public int Id { get; set; }
-
         public string Nombre { get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime FechaEntrega { get; set; }
@@ -20,4 +20,5 @@ namespace Kanban.Modelos
         public string EmpleadosA { get; set; }
 
     }
+#pragma warning restore CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
 }
